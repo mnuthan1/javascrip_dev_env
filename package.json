@@ -1,0 +1,20 @@
+{
+  "name": "java_script_dev_env",
+  "version": "1.0.0",
+  "description": "Java Script development environment",
+  "scripts": {
+    "prestart": "node buildScripts/serverStartMessage.js",
+    "start": "node buildScripts/srcServer.js",
+    "security-check": "nsp check"
+  },
+  "author": "Nuthan Kumar",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "^2.3.0",
+    "express": "^4.16.2",
+    "nsp": "^3.1.0",
+    "open": "0.0.5",
+    "path": "^0.12.7"
+  }
+}
