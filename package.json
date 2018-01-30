@@ -3,18 +3,27 @@
   "version": "1.0.0",
   "description": "Java Script development environment",
   "scripts": {
-    "prestart": "node buildScripts/serverStartMessage.js",
-    "start": "node buildScripts/srcServer.js",
-    "security-check": "nsp check"
+    "build:dev": "npm run tsc && npm start",
+    "prebuild:dev": "npm run clean:dist",
+    "clean:dist": "npm run rimraf -- dist",
+    "build": "npm run build:dev",
+    "prestart": "node ./dist/app/buildScripts/serverStartMessage.js",
+    "start": "node ./dist/app/buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "rimraf": "rimraf",
+    "tsc": "tsc"
   },
   "author": "Nuthan Kumar",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^9.4.0",
     "chalk": "^2.3.0",
     "express": "^4.16.2",
     "nsp": "^3.1.0",
     "open": "0.0.5",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.6.2"
   }
 }

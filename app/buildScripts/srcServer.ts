@@ -2,16 +2,17 @@
  * srcServer.js will server the files in our src directory
  * this act as DEV server
  */
-var express = require("express");
-var path = require("path");
-var open = require("open");
+import * as express from 'express';
+import * as path   from 'path';
+import * as open   from 'open';
 
-var port = 3000;
-
+const port = 3000;
+const __dirname = path.resolve('');
+path.resolve();
 var app = express();
 // Root path
 app.get('/', function(req,res) {
-  res.sendFile(path.join(__dirname,'../src/index.html'));
+  res.sendFile(path.join(__dirname,'/app/index.html'));
 });
 
 /**
