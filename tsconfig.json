@@ -1,17 +1,25 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "baseUrl": "",
+    "pretty": true,
+    "baseUrl": ".",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "lib": ["es6", "dom"],
-    "rootDir": "./",
+    "rootDir": "./src/",
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "dist/",
     "sourceMap": true,
-    "target": "es5",
+    "target": "es6",
     "typeRoots": [
       "../node_modules/@types"
     ]
